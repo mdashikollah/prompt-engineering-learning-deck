@@ -1,0 +1,13 @@
+{
+  "name": "prompt-engineering-quiz",
+  "private": true,
+  "scripts": {
+    "dev": "wrangler pages dev public",
+    "deploy": "wrangler pages deploy public --project-name prompt-engineering",
+    "db:init": "wrangler d1 execute prompt-engineering-quiz --remote --file=schema.sql",
+    "password:set": "wrangler pages secret put QUIZ_PASSWORD --project-name prompt-engineering"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}
